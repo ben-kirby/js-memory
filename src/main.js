@@ -1,23 +1,47 @@
-import { memory } from './memory'
+import { Memory } from './memory'
+import './styles.css';
 
 $(document).ready(function(){
-  console.log('hi')
 
-  const random = ['m1', 'm1', 'm2', 'm2'];
+  let game = new Memory();
 
-  random.forEach(function(i) {
-    const newImage = document.createElement('img');
-    newImage.setAttribute('src','https://picsum.photos/200');
-    newImage.setAttribute('class',i);
-    
-    document.body.append(newImage);
+  const imageElement = document.getElementById('id');
+
+  game.pairs.forEach(function(i, index){
+    const box = document.getElementById(`box${index}`);
+    box.setAttribute('class', `${i}`);
+
+    // box.setAttribute('style',"background: url('https://picsum.photos/200/?random');");
+
+    const image = document.createElement('img');
+    image.setAttribute('src','http://www.freepngclipart.com/thumb/questions/7554-questions-green-question-mark-images-hd-image-thumb.png');
+
+    image.setAttribute('class', `${i}`);
+    image.setAttribute('id', `image-id-${index}`);
+
+    box.append(image);
+  });
 
 
-  })
+  const testingThisElement = document.getElementById('imageTable');
 
+  let buffer = [];
 
+  testingThisElement.addEventListener('click', function(event){
+    game.flipCard(event.target)
+    buffer.push(event.target);
+    if (buffer.length == 2) {
+      if (game.isMatch(buffer)) {
+        game.clearPieces(buffer);
+      }
+      else{
+        game.resetCard(buffer);
+      }
 
+      buffer = [];
 
-// [1,1,2,2,3,3,4,4,5,5].random()
-// 2,3,5,4,2,3,5,4,1,1
+    }
+
+  });
+
 });

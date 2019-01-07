@@ -1,0 +1,46 @@
+th.m1 {
+  background: url('https://picsum.photos/200/200/?image=998');
+  width: 200px;
+  height: 200px;
+}
+th.m2 {
+  background: url('https://picsum.photos/200/200/?image=997');
+  width: 200px;
+  height: 200px;
+}
+th.m3 {
+  background: url('https://picsum.photos/200/200/?image=996');
+  width: 200px;
+  height: 200px;
+}
+th.m4 {
+  background: url('https://picsum.photos/200/200/?image=995');
+  width: 200px;
+  height: 200px;
+}
+th.m5 {
+  background: url('https://picsum.photos/200/200/?image=994');
+  width: 200px;
+  height: 200px;
+}
+
+.flipped{
+  opacity: 0.0
+}
+
+
+.matched {
+  /* display: none; */
+  opacity: 0;
+}
+
+.m5{
+  img: hidden;
+}
+
+.m1.active{
+
+}
+.m1{
+
+}
