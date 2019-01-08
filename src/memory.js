@@ -10,24 +10,31 @@ class Memory {
 
   flipCard(card){
     card.className = card.className + ' flipped'
-    // console.log(card)
-    // card.setAttribute('src', 'http://www.freepngclipart.com/thumb/questions/7554-questions-green-question-mark-images-hd-image-thumb.png')
-    // card.setAttribute('id', '')
+
   }
 
   resetCard(buffer){
-    // var paragraph = 'm1 flipped';
     const regex = /[^ flipped]/g;
 
-    let newClass = buffer[0].className.match(regex).join("");
-    buffer[0].className = newClass;
+    setTimeout(function(){
+      let newClass = buffer[0].className.match(regex).join("");
+      buffer[0].className = newClass;
 
-    newClass = buffer[1].className.match(regex).join("");
-    buffer[1].className = newClass;
+      newClass = buffer[1].className.match(regex).join("");
+      buffer[1].className = newClass;
+
+    }, 500)
+
+
+    // let newClass = buffer[0].className.match(regex).join("");
+    // buffer[0].className = newClass;
+    //
+    // newClass = buffer[1].className.match(regex).join("");
+    // buffer[1].className = newClass;
   }
 
   isMatch(buffer){
-    if (buffer[0].className === buffer[1].className) {
+    if ((buffer[0].className === buffer[1].className) && (buffer[0].id != buffer[1].id)) {
       return true;
     }
     return false;

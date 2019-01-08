@@ -32,9 +32,18 @@ $(document).ready(function(){
     buffer.push(event.target);
     if (buffer.length == 2) {
       if (game.isMatch(buffer)) {
+
+        // setTimeout(myFunction, 3000)
+
+
         game.clearPieces(buffer);
       }
       else{
+
+        // setTimeout(myFunction, 3000)
+
+
+
         game.resetCard(buffer);
       }
 
