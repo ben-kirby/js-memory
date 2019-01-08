@@ -26,11 +26,6 @@ class Memory {
     }, 500)
 
 
-    // let newClass = buffer[0].className.match(regex).join("");
-    // buffer[0].className = newClass;
-    //
-    // newClass = buffer[1].className.match(regex).join("");
-    // buffer[1].className = newClass;
   }
 
   isMatch(buffer){

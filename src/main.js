@@ -11,7 +11,6 @@ $(document).ready(function(){
     const box = document.getElementById(`box${index}`);
     box.setAttribute('class', `${i}`);
 
-    // box.setAttribute('style',"background: url('https://picsum.photos/200/?random');");
 
     const image = document.createElement('img');
     image.setAttribute('src','http://www.freepngclipart.com/thumb/questions/7554-questions-green-question-mark-images-hd-image-thumb.png');
@@ -33,14 +32,12 @@ $(document).ready(function(){
     if (buffer.length == 2) {
       if (game.isMatch(buffer)) {
 
-        // setTimeout(myFunction, 3000)
 
 
         game.clearPieces(buffer);
       }
       else{
 
-        // setTimeout(myFunction, 3000)
 
 
 
